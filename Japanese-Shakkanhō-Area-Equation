@@ -1,0 +1,45 @@
+def jaunit = args.jaunit //The Japanese unit of area. Used in vCalc to create a string datatype for a drop-down menu allowing the user to select between different units.
+def n = args.n //Numeral that the user inputs. Used in vCalc to create an input box.
+
+def shaku = 18.18240908130713.cm.power(2) //Shaku
+def gō = 0.574978260458602.m.power(2) //Gō
+def jō = 1.285690475970014.m.power(2) //Jō
+def tsubo = 1.818240908130713.m.power(2) //Tsubo
+def bu = 1.818240908130713.m.power(2) //Bu
+def se = 9.958413528268446.m.power(2) //Se
+def tan = 31.49126863116188.m.power(2) //Tan
+def chō = 99.58413528268446.m.power(2) //Chō or Chōbu
+
+def y = 0  //Initializes the basic unit.
+
+switch (jaunit) {
+  case "Shaku":
+     y = shaku    
+     break
+  case "Gō":
+     y = gō
+     break
+  case "Jō":
+     y = jō
+     break
+  case "Tsubo":
+     y = tsubo
+     break
+  case "Bu":
+     y = bu
+     break
+  case "Se":
+     y = se
+     break
+  case "Tan":
+     y = tan
+     break
+  case "Chō or Chōbu":
+     y = chō
+     break
+  default:
+     return "unit not supported"
+  } // end switch
+  
+  def x = y*n
+  return x

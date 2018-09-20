@@ -1,0 +1,37 @@
+def jrunit = args.jrunit //The Japanese unit of rice weights. Used in vCalc to create a string datatype for a drop-down menu allowing the user to select between different units.
+def n = args.n //Numeral that the user inputs. Used in vCalc to create an input box.
+
+def shaku = 15.g //Shaku
+def gō = 150.g //Gō
+def shō = 1.5.kg //Shō
+def to = 15.kg //To
+def hyō = 60.kg //Hyō
+def koku = 150.kg //Koku
+
+def y = 0  //Initializes the basic unit.
+
+switch (jrunit) {
+  case "Shaku":
+     y = shaku    
+     break
+  case "Gō":
+     y = gō
+     break
+  case "Shō":
+     y = shō
+     break
+  case "To":
+     y = to
+     break
+  case "Hyō":
+     y = hyō
+     break
+  case "Koku":
+     y = koku
+     break
+  default:
+     return "unit not supported"
+  } // end switch
+  
+  def x = y*n
+  return x
