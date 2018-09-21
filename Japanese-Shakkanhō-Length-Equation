@@ -1,0 +1,53 @@
+def jlunit = args.jlunit //The Japanese unit of length. Used in vCalc to create a string datatype for a drop-down menu allowing the user to select between different units.
+def n = args.n //Numeral that the user inputs. Used in vCalc to create an input box.
+
+def mō = 0.03030.mm //Mō
+def rin = 0.3030.mm //Rin
+def bu = 3.030.mm //Bu
+def sun = 3.030.cm //Sun
+def shaku = 30.30.cm //Shaku
+def ken = 1.818.m //Ken
+def hiro = 1.818.m //Hiro
+def jō = 3.030.m //Jō
+def chō = 109.09.m //Chō
+def ri = 3.927.km //Ri
+
+def y = 0  //Initializes the basic unit.
+
+switch (jlunit) {
+  case "Mō":
+     y = mō      
+     break
+  case "Rin":
+     y = rin
+     break
+  case "Bu":
+     y = bu
+     break
+  case "Sun":
+     y = sun
+     break
+  case "Shaku":
+     y = shaku
+     break
+  case "Ken":
+     y = ken
+     break
+  case "Hiro":
+     y = hiro
+     break
+  case "Jō":
+     y = jō
+     break
+  case "Chō":
+     y = chō
+     break
+  case "Ri":
+     y = ri
+     break
+  default:
+     return "unit not supported"
+  } // end switch
+  
+  def x = y*n
+  return x
